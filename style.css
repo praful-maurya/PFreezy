@@ -1,0 +1,431 @@
+* {
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+}
+
+html {
+    background-color: #fff;
+    color: #555;
+    font-family: 'lato', 'Arial', 'sans-serif';
+    font-size: 20px;
+    font-weight: 300;
+    text-rendering: optimizeLegibility;
+}
+
+/* .clearfix {zoom: 1;} */
+.clearfix::after {
+    content: '';
+    display: block;
+    clear: both;
+    height: 0;
+    visibility: hidden;
+}
+
+/* ------------------------------- */
+/* RESUABLE COMPONENTS */
+/* ------------------------------- */
+
+/* content will be in row */
+.row {
+    max-width: 1140px;
+    margin: 0 auto;
+    }
+
+    section {
+        padding: 70px;
+    }
+
+    .box {
+        padding: 1%;
+    }
+
+ /* HEADINGS */
+h1 {
+    margin-top: 0;
+    margin-bottom: 15px;
+    color: white;
+    /* font size will 200% of 20px */
+    font-size: 200%; 
+    font-weight: 300;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    word-spacing: 1px;
+}
+
+h2 {
+    font-weight: 350;
+    font-size: 180%;
+    letter-spacing: 1px;
+    word-spacing: 1px;
+    text-transform: uppercase;
+    margin-bottom: 30px;
+    text-align: center;
+}
+h2::after {
+    content: '';
+    display: block;
+    height: 2px;
+    width: 100px;
+    margin: 15px auto;
+    background-color: orangered;
+}
+h3 {
+    font-weight: 350;
+    margin-bottom: 10%;
+    text-transform: uppercase;
+}
+
+/* --------PARAGRAPHS ------------*/
+.long-copy {
+    line-height: 140%;
+    /* if width is 70% then margin left we put 15% so right also will become 15
+     coz width is 70 so 70+15+15 = 100 */
+    width: 70%;
+    margin-left: 15%;
+}
+.box p {
+    font-size: 100%;
+    line-height: 145%;
+}
+
+/* -----------ICON ------------*/
+.icon-big {
+    font-size: 350%;
+    color: orangered;
+    display: block;
+    margin-bottom: 10px;
+}
+
+/* btn work */
+/* what should happen with btns u can declare here normally like transition over hover */
+.btn:link {
+    display: inline-block;
+    padding: 10px 30px;
+    font-weight: 300;
+    text-decoration: none;
+    border-radius: 200px;
+    transition: 0.2s, color 0.2s, border 0.2s;
+}
+
+/* hover effect- get orange when hover on btns */
+.btn:hover{
+    background-color: orangered;
+    
+}
+.btn-full{
+    color: white;
+    background-color: rgb(255, 153, 0);
+    border: 1px solid black;
+}
+
+.btn-ghost{
+    /* background-color: ; */
+    border: 50px soild orange;
+    color: white;
+}
+
+.btn-full:hover {
+    border: 1px solid blue;
+}
+
+.btn-ghost:hover {
+    border: 1px solid blue;
+
+}
+
+/* ------------------------------- */
+/* HEADER */
+/* ------------------------------- */
+
+header {
+    /* transperancy color ex- rgba (0,0,0,0) */
+    background-image:linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(img/hero.jpg.jpg);
+    background-size: cover;
+    background-attachment:fixed;
+    background-position: center;
+    height: 100vh;
+}
+
+.hero-text-box {
+    position: absolute;
+    
+    width: 1140px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%);
+}
+
+.logo {
+    height: 100px;
+    width: auto;
+    float: left;
+    margin-top: 20px;
+    
+}
+.main-nav {  
+    /* in main-nav there is li */
+    margin-top: 55px;
+    float: right;
+    
+}
+.main-nav li {
+    display: inline-block;
+    margin-left: 40px;
+    
+}
+.main-nav li a{
+    padding-bottom: 8px;
+    text-decoration: none;
+    color: white;
+    font-size: 20px;
+    text-transform: uppercase;
+    border-bottom: 2px solid transparent;
+    transition: border-bottom 0.2s;
+}
+
+.main-nav li a:hover {
+    border-bottom: 2px solid orangered;
+}
+
+/* ---------MEALS------------- */
+
+.section-meals {
+    padding: 0px;
+}
+
+.meals-showcase {
+    list-style: none;
+    /* width 100% means browser ka pura with use karre */
+    width: 100%;
+    
+}
+
+.meals-showcase li {
+    display: block;
+    /* float left karne side by side hogaya img */
+    float: left;
+    /* width 25% har img 25% lera toh 4 img ka 100% width */
+    width: 25%;
+}
+.meals-photo {
+    /* 100% width matlab 25% hee. coz meals showcase uska parenrt hai */
+    /* aur uska 25% width hai toh parent ka 100% width = 25 */
+    width: 100%;
+    background-color: black;
+    overflow: hidden;
+}
+.meals-photo img {
+    opacity: 0.6;
+    /* same */
+    width: 100%;
+    height: auto;
+    /* transform sclae is zoom in out */
+    transform: scale(1.15);
+    transition: transform 0.5s;
+}
+
+.meals-photo img:hover {
+    opacity: 0.8;
+    transform: scale(1.05);
+    transition: transform 0.1s;
+}
+
+/* -------------------------------- */
+/* HOW IT WORKS */
+/* ---------------------------------- */
+
+.section-steps{
+    background-color: rgba(253, 246, 246, 0.993);
+}
+.steps-box:first-child {
+    text-align: right;
+    padding-right: 3%;
+    margin-top: 30px;
+}
+
+.steps-box:last-child {
+    padding-left: 3%;
+    margin-top: 70px;
+}
+
+.app-screen{
+    width: 40%;
+}
+
+.work-step {
+    margin-bottom: 50px;
+}
+
+.work-step div {
+    margin-right: 20px;
+    color: orangered;
+    border: 2px solid orangered;
+    display: inline-block;
+    border-radius: 50%;
+    padding: 7px 12px;
+    float: left;
+}
+
+.btn-app img {
+    height: 50px;
+}
+.btn-app img {
+    height: 50px;
+}
+
+/* ------------- 
+    Cities
+ -------------- */
+
+.box img {
+    width: 100%;
+    height: auto;
+    margin-bottom: 15px;
+}
+.city-feature {
+margin-bottom: 5px;
+padding: 2px;
+}
+
+.city-feature a {
+    color: rgb(230, 107, 25);
+    text-decoration: none;
+    border-bottom: 2px solid orange;
+    padding: 1px;
+    transition: border-bottom 0.2s, color 0.2s;
+}
+
+.city-feature a:hover{
+    border-bottom: 1px solid transparent;
+}
+
+.icon-small {
+   color: rgb(226, 105, 61);
+   font-size: 125%;
+   margin-right: 3px;
+   font-weight: 300;
+   margin-left: 5px;
+}
+
+/* ---------------------- */
+/* customer review (TESTIMONIALS)*/
+/* ------------------------ */
+
+
+.section-testimonials {
+    background-image:linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url(img/back-customers.jpg);
+    background-size: cover;
+    color: white;
+}
+
+blockquote {
+    padding: 2%;
+    font-style: italic;
+    line-height: 140%;
+}
+
+cite {
+    font-size: 90%;
+    display: block;
+    margin-top: 25px;
+}
+
+cite img {
+    height: 50px;
+    border-radius: 50%;
+    display: block;
+    background-attachment: fixed;
+    /* vertical-align: middle; */
+}
+
+
+/* --------------------------- */
+   /* PLANS */
+   /* ------------------------------ */
+
+.section-plan{
+    background-color: rgba(250, 247, 247, 0.953);
+}
+
+.plan-price {
+    color: orangered;
+    font-weight: 300;
+    font-size: 1.5rem;
+}
+
+.plan-price-permeal{
+    padding-top: 12px;
+}
+
+.plan-box {
+    background-color: #fff;
+    width: 90%;
+    border-radius: 5px;
+    margin-left: 5%;
+    border-radius: 2%;
+}
+
+.plan-box h3 {
+    padding-top: 8px;
+    padding-left: 8px;
+}
+
+.plan-feature{
+    margin: 15px 0;
+}
+
+.plan-feature ul li{
+    padding-top: 10px;
+    list-style: none;
+    padding-left: 5px;
+}
+/* .plan-list li {
+    padding-top: 5px;
+    display: block;
+    
+} */
+
+.plan-list {
+    list-style: none;
+    padding: 0px 00px;
+    margin-top: 20px;
+    margin-bottom: 15px;
+    background-color: #fff;
+}
+
+.sign-up {
+    display: inline-block;
+    text-decoration: none;
+    background-color: rgba(255, 68, 0, 0.83);
+    border-radius: 200px;
+    color:white;
+    padding: 15px 25px;
+    margin:30px 0px;
+    margin-left: 30%;
+}
+
+.name, .email{
+    margin-right: 10%;
+    padding-right: 10%;
+    font-weight: 400;
+}
+
+input{
+    padding: 0.5% 0;
+    padding-right: 15%;
+    padding-left: 5px;
+    border-radius: 3%;
+}
+
+.option{
+margin-right: 28.7%;
+font-weight: 400;
+}
+
+.form{
+    text-align: center;
+}
+
+
+

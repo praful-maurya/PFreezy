@@ -2,7 +2,6 @@
 - 👀 I’m interested in Web desgining and development
 - 🌱 I’m currently learning react.js and more
 - 💞️ I’m looking to collaborate on 
-- 📫 How to reach me 9967818196
 
 <!---
 PFreezy/PFreezy is a ✨ special ✨ repository because its `README.md` (this file) appears on your GitHub profile.
